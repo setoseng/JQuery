@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+  /*
+  When the clear button is clicked, clear the text field.
+  When the save button is clicked, take the text value inside the text field, and append a new <li> element to the #log with the entered text value.
+  */
+    $(function () {
+      // write your code here
+      $('a').click(function(event){
+        var whateveryouwant = $(this).attr('href');
+        event.preventDefault();
+        $('#iframe').attr('src', whateveryouwant);
+      })
+    });
+    </script>
+  </head>
+  <body>
+  <ul>
+    <li><a href="http://hellohappy.org">Hello Happy</a></li>
+    <li><a href="http://duckduckgo.com">DuckDuckGo</a></li>
+    <li><a href="http://css-tricks.com">CSS Tricks</a></li>
+  </ul>
+  <iframe id="iframe" src="http://hellohappy.org" width="800" height="480"></iframe>
+</body>
+</html>
